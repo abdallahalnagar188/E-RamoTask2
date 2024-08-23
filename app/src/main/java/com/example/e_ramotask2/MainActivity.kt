@@ -25,10 +25,9 @@ class MainActivity : AppCompatActivity() {
         val brokersAdapter = BrokersAdapter()
         lifecycleScope.launch {
             viewModel.brokers.collect {
-                Log.e("elnagar", it?.data?.original?.data.toString(), )
+                Log.e("Alnagar", it?.data?.original?.data.toString())
                 brokersAdapter.submitList(it?.data?.original?.data)
                 binding.brokerRv.adapter = brokersAdapter
-
             }
         }
     }

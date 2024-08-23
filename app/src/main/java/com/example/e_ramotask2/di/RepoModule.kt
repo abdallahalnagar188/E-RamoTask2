@@ -15,5 +15,4 @@ object RepoModule {
     fun provideRepository(apiService: ApiService): BrokersRepo {
         return BrokersRepoImpl(apiService)
     }
-
 }

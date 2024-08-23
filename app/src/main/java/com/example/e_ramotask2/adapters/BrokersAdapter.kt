@@ -19,8 +19,8 @@ class BrokersAdapter :
         fun bind(broker: DataX) {
             binding.nameTv.text = broker.name
             binding.descriptionTv.text = broker.description
-            binding.brokerTypeTv.text = "Brokers Type : ${broker.broker_type}"
-            binding.propertiesCountTv.text = "${broker.properties_count}  Property"
+            binding.brokerTypeTv.text = " ${broker.property_for_sale} Property for sale "
+            binding.propertiesCountTv.text = "${broker.property_for_rent}  Property for rent"
             Glide.with(binding.root.context).load(broker.logo).into(binding.logo)
         }
     }
